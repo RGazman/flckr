@@ -1,4 +1,4 @@
-#import beatufulsoup4
+from bs4 import BeautifulSoup
 import os #Module for directory (create/delete)
 import requests
 
@@ -9,15 +9,21 @@ def CheckList():
 
     fotog_for_open = path + "\Fotolist.txt"      #Generate new path for fotograph list
     #print (fotog_for_open) 
-    check = open('.\check.txt','w')
+    check = open('.\check.html','w+')
 
     links_fotograph = open(fotog_for_open, "r")  #Open file for reading
     for read_links in links_fotograph:           #Read link from file; by line
         print (read_links) 
-        check.writelines(str(requests.get(read_links.strip()).content)+'\n\n')       
+        check.writelines(str(requests.get(read_links.strip()).content))    #Open link without '\n'   
         #print (requests.get(read_links.strip()).content) #Open link without '\n'
+        cache = BeautifulSoup(check, features="lxml")
+        print(cache)
+        
+        check.truncate(0)                        #Erase the file
+        
+
     links_fotograph.close()                      #Close file
-    check.close()
+    check.close()                                #Close file
 
 
 
