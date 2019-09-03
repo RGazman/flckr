@@ -33,7 +33,7 @@ def CheckList():
     try:
         os.mkdir(path + new_path, access_right)     #Create dir with new_path and access_ringt
     except OSError:
-        print ("Cration of the dir %s failed" % path)
+        print ("Creation of the dir %s failed" % path)
     else:
         print ("OKSuccessfully created")
 '''
