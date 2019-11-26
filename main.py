@@ -45,6 +45,4 @@ def CheckList():
     #check.close()                                #Close file
 
 
-
-
 CheckList()
