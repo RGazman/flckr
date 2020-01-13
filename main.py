@@ -41,8 +41,16 @@ def CheckList():
             print ("OKSuccessfully created")
         
 
-    links_fotograph.close()                       #Close file
-    #check.close()                                #Close file
+'''
+    access_right = 0o755    #Define the access rights
+    new_path = "\\test"     #Define the new name for new dir
+    try:
+        os.mkdir(path + new_path, access_right)     #Create dir with new_path and access_ringt
+    except OSError:
+        print ("Creation of the dir %s failed" % path)
+    else:
+        print ("OKSuccessfully created")
+'''
 
 
 CheckList()
