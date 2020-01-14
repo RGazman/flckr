@@ -53,7 +53,7 @@ def UploadFoto(user_id,new_path):
     pages = 2
     data={ #Parameters for requests
         'method' : 'flickr.people.getPhotos',                                   #Required
-        'api_key' : '28ea05013d51dd1bbe72097140506dcb',                         #Required //Indicate your api key
+        'api_key' : '',                                                         #Required //Indicate your api key
         'user_id' : user_id.group(0),                                           #
         'per_page' : str(per_page),                                             #
         'page' : page,
