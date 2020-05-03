@@ -11,12 +11,15 @@
   
  ### Подготовка:
   1. Скопируйте или скачайте репозиторий.
-  2. Установите (для всего: версия не ниже указанной):
-  * Python3.6
-  * beautifulsoup4==4.8.0   команда: pip install beautifulsoup4
-  * requests==2.19.1        команда: pip install requests
+  2. Установите (для всего: версия не ниже указанной):       
+     
+     2.1. Python3.6.    
+     2.2. beautifulsoup4==4.8.0   команда: pip install beautifulsoup4.     
+     2.3. requests==2.19.1        команда: pip install requests.
+     
   3. Получите api_key на странице https://www.flickr.com/services/apps
   4. Полученный ключ из пункта 3 укажите в '' в строчках 56, 75
+  
   ***Пример:***
   ```python
    #python
